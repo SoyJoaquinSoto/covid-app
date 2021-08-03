@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function CountryCard({ country }) {
 	return (
 		<div className="border-2 border-black p-3">
@@ -13,9 +15,11 @@ function CountryCard({ country }) {
 				<p>Total Recovered: {country.TotalRecovered}</p>
 				<p>Date: {country.Date}</p>
 			</div>
-			<button className="bg-gray-200 rounded-lg w-full p-2">
-				Go to Country
-			</button>
+			<Link to={`/countries/${country.Country}`}>
+				<button className="bg-gray-200 rounded-lg w-full p-2">
+					Go to Country
+				</button>
+			</Link>
 		</div>
 	);
 }

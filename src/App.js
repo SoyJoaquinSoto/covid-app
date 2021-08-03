@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import DayOneScreen from "./screens/DayOneScreen";
+import CountryScreen from "./screens/CountryScreen";
 import HomeScreen from "./screens/HomeScreen";
 
 export default function App() {
@@ -11,8 +11,8 @@ export default function App() {
 				</nav>
 
 				<Switch>
-					<Route path="/day-one">
-						<DayOneScreen />
+					<Route path="/countries/:name">
+						<CountryScreen />
 					</Route>
 					<Route path="/">
 						<HomeScreen />
